@@ -1,0 +1,16 @@
+---
+- name: copy server key
+  copy:
+    src: {{local_key_file_path}}
+    dest: {{key_file_path}}
+    mode: 0644
+- name: copy server cert
+  copy:
+    src: {{local_cert_file_path}}
+    dest: {{cert_file_path}}
+    mode: 0644
+- name: copy ca file
+  copy:
+    src: {{local_ca_file_path}}
+    dest: {{ca_file_path}}
+    mode: 0644

@@ -1,0 +1,4 @@
+---
+key_file_path: /etc/pki/tls/keys/server.key
+cert_file_path: /etc/pki/tls/certs/server.crt
+ca_file_path: /etc/pki/tls/CA/root.cert
