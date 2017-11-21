@@ -1,4 +1,16 @@
 ---
+- name: Create key file directory
+  file:
+    path: "{{key_file_path|dirname}}"
+    state: directory
+- name: Create cert file directory
+  file:
+    path: "{{cert_file_path|dirname}}"
+    state: directory
+- name: Create ca file directory
+  file:
+    path: "{{ca_file_path|dirname}}"
+    state: directory
 - name: copy server key
   copy:
     src: "{{local_key_file_path}}"
